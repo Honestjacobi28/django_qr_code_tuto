@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            Générateur de codes QR
+        </h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" id="data" placeholder="ecriver quelque chose">
+            <button>Générer</button>
+        </form>
+
+        <div class="qr-img">
+            
+            {% if img_name %}
+                <img src="" alt="qr-img">
+            {% endif %}
+                
+        </div>
+    </main>
+</body>
+</html>
